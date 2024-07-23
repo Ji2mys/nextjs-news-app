@@ -167,10 +167,14 @@ ul {
   margin: 0;
 }
 
+#archive-header {
+  margin-bottom: 2rem;
+}
+
 #archive-header ul {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #archive-header ul a {
