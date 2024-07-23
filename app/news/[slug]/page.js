@@ -1,8 +1,10 @@
-import { DUMMY_NEWS } from "@/dummy-news";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+
+import { DUMMY_NEWS } from "@/dummy-news";
 
 export default function NewsDetail({ params }) {
-  const newsSlug = params.id;
+  const newsSlug = params.slug;
   const newsItem = DUMMY_NEWS.find((newsItem) => newsItem.slug === newsSlug);
 
   if (!newsItem) {
@@ -12,7 +14,9 @@ export default function NewsDetail({ params }) {
   return (
     <article className="news-article">
       <header>
-        <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />
+        <Link href={`/news/${newsSlug}/image`}>
+          <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />
+        </Link>
         <h1>{newsItem.title}</h1>
         <time dateTime={newsItem.date}>{newsItem.date}</time>
       </header>
