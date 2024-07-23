@@ -7,11 +7,11 @@ import {
   getNewsForYear,
   getNewsForYearAndMonth,
 } from "@/lib/news";
-import { notFound } from "next/navigation";
 
 export default function FilteredArchivePage({ params }) {
   const filter = params.filter;
-  if (filter && filter.length > 2) notFound();
+  if (filter && filter.length > 2)
+    throw new Error("Invalid path. Only year and month allowed.");
 
   const yearLinks = getAvailableNewsYears();
   let selectedNews;
@@ -24,6 +24,13 @@ export default function FilteredArchivePage({ params }) {
     selectedNews = getNewsForYear(selectedYear);
   if (selectedMonth)
     selectedNews = getNewsForYearAndMonth(selectedYear, selectedMonth);
+
+  if (
+    (selectedYear && !yearLinks.includes(+selectedYear)) ||
+    (selectedMonth && !monthLinks.includes(+selectedMonth))
+  ) {
+    throw new Error("Invalid path. Time period is not available.");
+  }
 
   return (
     <>
