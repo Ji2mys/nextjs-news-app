@@ -28,44 +28,6 @@ ul {
   margin: 2rem auto;
 }
 
-#main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-#logo {
-  font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
-  border-radius: 4px;
-}
-
-#main-header #logo a,
-#main-header #logo a:hover {
-  color: #e1e1d7;
-  text-decoration: none;
-}
-
-#main-header ul {
-  display: flex;
-  gap: 2rem;
-  font-weight: bold;
-}
-
-#main-header ul a {
-  text-decoration: none;
-  color: #e5e5e1;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-}
-
-#main-header ul a:hover,
-#main-header ul a.active {
-  background-color: #bcbcb7;
-  color: #181817;
-}
-
 #home {
   margin: 3rem auto;
   max-width: 50rem;
@@ -167,10 +129,14 @@ ul {
   margin: 0;
 }
 
+#archive-header {
+  margin-bottom: 2rem;
+}
+
 #archive-header ul {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #archive-header ul a {
@@ -195,4 +161,15 @@ ul {
 .error {
   text-align: center;
   margin-top: 3rem;
+  color: lightcoral;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+.error h2,
+.error h1 {
+  background-color: lightcoral;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
