@@ -1,0 +1,6 @@
+.fullscreen-image img {
+  width: 100%;
+  box-shadow: 0 5px 20px 0 black;
+  border-radius: 5px;
+  position: relative !important;
+}
