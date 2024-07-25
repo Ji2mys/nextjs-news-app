@@ -12,6 +12,7 @@ export default function NewsList({ news }) {
                 src={`/images/news/${newsItem.image}`}
                 alt={newsItem.title}
                 fill
+                sizes="(max-width: 620px) 80vw, (max-width: 940px) 40w, (max-width: 1260px): 25vw, 20vw"
               />
             </div>
             <span>{newsItem.title}</span>
