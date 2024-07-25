@@ -12,7 +12,7 @@ body {
   margin: 0;
   background-color: #181817;
   color: #e5e5e1;
-  width: 60vw;
+  width: 80vw;
   margin: 20px auto;
 }
 
@@ -92,6 +92,10 @@ ul {
   overflow: hidden;
 }
 
+.news-list-image img {
+  object-fit: cover;
+}
+
 .news-list a:hover {
   background-color: #2d2d2b;
 }
@@ -110,6 +114,7 @@ ul {
 
 .news-article img {
   width: 7rem;
+  height: 7rem;
   margin-bottom: 1rem;
   border-radius: 4px;
 }
